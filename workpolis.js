@@ -26,7 +26,7 @@ const getJobs = async (query, test) => {
             const created = new Date($card.find('time').attr('datetime'));
             const apply = `https://www.workopolis.com${$card.find('a').attr('href')}`;
             const id = $card.attr('data-jobkey');
-            const source = "Workopolis";
+            const source = "Workpolis";
 
             const data = {id, title, apply, location, company, created, source};
             results.push(data);
@@ -49,7 +49,7 @@ const getJobs = async (query, test) => {
     }
     console.log({
         query,
-        source: 'Workopolis',
+        source: 'Workspolis',
         results: jobs.length
     });
     return jobs;
